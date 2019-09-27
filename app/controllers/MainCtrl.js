@@ -17,6 +17,7 @@ app.controller('MainCtrl', function($scope,$state, $http,$ionicPopup,$ionicSlide
     $scope.SubmitForm = function (formValid) {
         if(formValid) {
             sessionStorage.setItem("opdata", JSON.stringify($scope.data));
+            localStorage.setItem("balance", localStorage.getItem("balance")+$scope.data.amount);
             $state.go('app.airtime_power_pro');
         }else{
             $ionicPopup.alert({

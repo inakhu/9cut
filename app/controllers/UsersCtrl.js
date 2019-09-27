@@ -17,6 +17,7 @@ app.controller('userSignupCtrl', function($scope,$state, $http,$ionicPopup,HTSSe
 
     $scope.HTSsignupForm = function () {
         localStorage.setItem("user", JSON.stringify($scope.data));
+        localStorage.setItem("balance", 0);
         $state.go('login');
 
         /*HTSServices.HezecomPostNewInfo('users/signup', $scope.data)
@@ -279,6 +280,7 @@ app.controller('DashCtrl', function($scope,$state, $stateParams , HTSServices,$t
         $state.go('login');
     }
     else {
+        $scope.balance = localStorage.getItem("balance")
         $scope.myname =localStorage.getItem("myname");
         $scope.myusername = localStorage.getItem("myusername");
         $scope.myposition = localStorage.getItem("myposition");

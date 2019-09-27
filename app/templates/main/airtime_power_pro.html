@@ -1,4 +1,4 @@
-<ion-view view-title="Transaction" hide-back-button="false" cache-view="false">
+<ion-view view-title="Transaction" hide-back-button="true" cache-view="false">
     <ion-content class="padding" style="background: aliceblue">
 
         <div class="row responsive-sm  remvoeBP" >
@@ -10,24 +10,27 @@
                     <h4 class="center" ng-show="connectedOperatorData"> Airtime Retrieved For: {{posts.phone}}</h4>
                 </div>
 
-                <div class="list">
-                    <p class="center" ng-show="connectingDisco">Connecting to {{posts.disco}}...</p>
-                    <p class="center balanced" ng-show="connectedDisco">Connected to: {{posts.disco}}</p>
-                    <h4 class="center" ng-show="connectedDiscoData">Meter No.: {{posts.meter}}</h4>
+                <div ng-if="posts.type=='power'">
+                    <div class="list">
+                        <p class="center" ng-show="connectingDisco">Connecting to {{posts.disco}}...</p>
+                        <p class="center balanced" ng-show="connectedDisco">Connected to: {{posts.disco}}</p>
+                        <h4 class="center" ng-show="connectedDiscoData">Meter No.: {{posts.meter}}</h4>
+                    </div>
                 </div>
 
                 <div class="list">
-                    <p class="center" ng-show="connectingTrans">Processing transaction...</p>
-                    <p class="center balanced" ng-show="connectedTrans">Transaction successful</p>
-
                     <div ng-if="posts.type=='power'">
+                        <p class="center" ng-show="connectingTrans">Processing transaction...</p>
+                        <p class="center balanced" ng-show="connectedTrans">Transaction successful</p>
                         <h4 class="center" ng-show="connectedTransData">Voucher Code: 9848848474</h4>
                         <p class="center" ng-show="connectedDataMsg">Kindly enter the voucher code to your meter.</p>
                         <h4 class="center assertive" ng-show="connectedDataMsg">{{posts.amount|currency:'N'}} amount retrieved from {{posts.phone}} and {{(posts.amount-10)|currency:'N'}} Voucher Code generated </h4>
                     </div>
 
                     <div ng-if="posts.type=='wallet'">
-                        <h4 class="center assertive" ng-show="connectedDataMsg">N{{posts.amount}} has been added to your wallet </h4>
+                        <p class="center" ng-show="connectingDisco">Processing transaction...</p>
+                        <p class="center balanced" ng-show="connectedDisco">Transaction successful</p>
+                        <h4 class="center assertive" ng-show="connectedDiscoData">N{{posts.amount}} has been added to your wallet </h4>
                     </div>
                 </div>
 
