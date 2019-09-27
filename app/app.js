@@ -167,7 +167,7 @@ angular.module('HezecomApp',[
                         controller: 'MainCtrl'
                     }
                 },
-                authStatus: true
+                //authStatus: true
             })
             .state('app.airtime_wallet', {
                 url: '/airtime_wallet',
