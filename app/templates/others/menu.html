@@ -1,0 +1,110 @@
+<ion-side-menus expose-aside-when="large">
+
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content class="custom">
+      <ion-list>
+        <ion-item class="heading-item item item-avatar header-bg" nav-clear menu-close ui-sref="app.profile">
+          <div class="user-image-container item-avatar">
+            <img class="user-image" ng-src="app/assets/images/avatar.jpg" spinner-on-load>
+          </div>
+
+          <h2 class="greeting" style="color: white">Hi {{user.name}}</h2>
+          <p class="message" style="color: white">Welcome back</p>
+        </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.dashboard">
+          <i class="icon ion-ios-home-outline"></i>
+          <h2 class="menu-text">Dashboard</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/profile/{{myuserid}}">
+          <i class="icon ion-ios-person-outline"></i>
+          <h2 class="menu-text">Profile</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.transactions">
+          <i class="icon ion-ios-bookmarks-outline"></i>
+          <h2 class="menu-text">Transactions</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.contact">
+          <i class="icon ion-ios-bookmarks-outline"></i>
+          <h2 class="menu-text">Contact Us</h2>
+        </ion-item>
+
+
+        <ion-item class="heading-item item " style="background: #e7ecf1">
+          <h2 class="greeting">Exchange</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.airtime_power">
+          <i class="icon ion-ios-barcode-outline"></i>
+          <h2 class="menu-text">Airtime to Power</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.airtime_wallet">
+          <i class="icon ion-ios-albums-outline"></i>
+          <h2 class="menu-text">Airtime to Wallet</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.wallet_bank">
+          <i class="icon ion-ios-home-outline"></i>
+          <h2 class="menu-text">Wallet to Bank</h2>
+        </ion-item>
+
+        <!--<ion-item class="heading-item item header-bg">
+          <h2 class="greeting" style="color: white">Telco Switch</h2>
+        </ion-item>-->
+        <ion-item class="heading-item item " style="background: #e7ecf1">
+          <h2 class="greeting">Telco Switch</h2>
+        </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.airtime_purchase">
+          <i class="icon ion-ios-briefcase-outline"></i>
+          <h2 class="menu-text">Buy Airtime</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.data_purchase">
+          <i class="icon ion-ios-briefcase-outline"></i>
+          <h2 class="menu-text">Buy Data</h2>
+        </ion-item>
+
+        <ion-item class="heading-item item " style="background: #e7ecf1">
+          <h2 class="greeting">Utility Payment</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.patients">
+          <i class="icon ion-ios-analytics-outline"></i>
+          <h2 class="menu-text">Electricity</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.patients">
+          <i class="icon ion-ios-copy-outline"></i>
+          <h2 class="menu-text">Cable</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.patients">
+          <i class="icon ion-ios-copy-outline"></i>
+          <h2 class="menu-text">DSTV</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.patients">
+          <i class="icon ion-ios-copy-outline"></i>
+          <h2 class="menu-text">GoTv</h2>
+        </ion-item>
+
+
+
+        <!-- <ion-item class="item-icon-left" nav-clear menu-close ng-click="doLogout()">
+           <i class="icon ion-log-out"></i>
+           <h2 class="menu-text">Logout</h2>
+         </ion-item>-->
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

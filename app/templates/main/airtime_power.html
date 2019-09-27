@@ -1,0 +1,68 @@
+<ion-view view-title="Airtime to Power" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+                <form name="htsform" ng-submit="SubmitForm(htsform.$valid)">
+                    <input type="hidden" name="type" ng-model="data.type" ng-init="data.type='power'"/>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="data.phone" name="phone" placeholder="Phone Number" required>
+                        </label>
+                    </div>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="data.meter" name="meter" placeholder="Meter Number" required>
+                        </label>
+                    </div>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="number" ng-model="data.amount" name="amount" placeholder="Amount" required>
+                        </label>
+                    </div>
+
+                    <div class="list">
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                                Operator:
+                            </div>
+                            <select ng-model="operator" ng-change="operatorValue(operator)" required>
+                                <option selected>MTN</option>
+                                <option>Airtel</option>
+                                <option>Glo</option>
+                                <option>9Mobile</option>
+                            </select>
+                        </label>
+                        <input type="hidden"  ng-model="data.operator" name="operator">
+                    </div>
+
+                    <div class="list">
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                                Disco:
+                            </div>
+                            <select ng-model="disco" ng-change="discoValue(disco)" required>
+                                <option>Abuja Electricity</option>
+                                <option>Eko Electricity</option>
+                                <option>Ibadan Electricity</option>
+                                <option>Ikeja Disco</option>
+                                <option>Kano Electricity</option>
+                                <option>Port Harcourt Electricity</option>
+                            </select>
+                        </label>
+                        <input type="hidden"  ng-model="data.disco" name="disco">
+                    </div>
+
+                    <div class="loginButton">
+                        <button class="button button-block button-calm"> Continue </button>
+                        <!--<a class="button button-block button-calm" ui-sref="app.vsuccess"> Continue </a>-->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

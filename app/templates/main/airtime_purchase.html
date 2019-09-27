@@ -1,0 +1,83 @@
+<ion-view view-title="Buy Airtime" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+                <form name="htsform" ng-submit="SubmitFormAirtimeData(htsform.$valid)">
+                    <input type="hidden" name="type" ng-model="data.type" ng-init="data.type='airtime'"/>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="data.phone" name="phone" placeholder="Recipient Phone Number" required>
+                        </label>
+                    </div>
+
+
+                    <div class="list">
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                                Operator:
+                            </div>
+                            <select ng-model="operator" ng-change="operatorValue(operator)" required>
+                                <option selected>MTN</option>
+                                <option>Airtel</option>
+                                <option>Glo</option>
+                                <option>9Mobile</option>
+                            </select>
+                        </label>
+                        <input type="hidden"  ng-model="data.operator" name="operator">
+                    </div>
+
+                    <ion-list>
+                        Select Amount (N)
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'100'">100</ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'200'">200</ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'300'">300</ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'400'">400</ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'500'">500</ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'1000'">1000</ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'1500'">1500</ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'2000'">2000</ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'2500'">2500</ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'3000'">3000</ion-radio>
+                            </div>
+                        </div>
+                    </ion-list>
+
+                    <div class="loginButton">
+                        <button class="button button-block button-calm"> Continue </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

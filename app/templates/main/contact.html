@@ -1,0 +1,29 @@
+<ion-view view-title="Contact Us" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+                <form name="htsform">
+                    <input type="hidden" name="type" ng-model="data.type" ng-init="data.type='airtime'"/>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="data.title" name="title" placeholder="Title">
+                        </label>
+                    </div>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <textarea type="text" ng-model="data.message" name="message" style="height: 100px;" placeholder="Enter your message"></textarea>
+                        </label>
+                    </div>
+
+                    <div class="loginButton">
+                        <button class="button button-block button-calm"> Send Message </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

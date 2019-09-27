@@ -1,0 +1,51 @@
+<ion-view view-title="Profile">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class=" text-center ui-gradient-deepblue padding">
+        <img class="avatar-account" ng-src="app/assets/images/avatar.jpg">
+      </div>
+
+      <h3 class="text-center calm">{{user.name}}</h3>
+
+      <div class="item item-body">
+
+        <div class="item" style="padding:0;">
+          <div class="row">
+            <div class="col text-center hts-grey">Email:</div>
+          </div>
+          <div class="row">
+            <div class="col text-center">{{user.email}}</div>
+          </div>
+        </div>
+
+        <div class="item" style="padding:0;">
+          <div class="row">
+            <div class="col text-center hts-grey">Phone Number:</div>
+          </div>
+          <div class="row">
+            <div class="col text-center">{{user.phone}}</div>
+          </div>
+        </div>
+
+        <!--<div class="row item">
+          <div class="col text-right hts-grey">User Status:</div>
+          <div class="col">
+            <button ng-if="row.user_status == 1" class="button button-calm button-small ">Active</button>
+            <button ng-if="row.user_status != 1" class="button button-assertive button-small">Inactive</button>
+          </div>
+        </div>-->
+
+        <div class="row item">
+          <div class="col text-right hts-grey ">Date Joined:</div>
+          <div class="col ">{{user.date_created|date:'dd MMM yyyy'}}</div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

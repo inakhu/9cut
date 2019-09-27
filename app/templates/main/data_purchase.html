@@ -1,0 +1,76 @@
+<ion-view view-title="Data Purchase" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+                <form name="htsform" ng-submit="SubmitFormAirtimeData(htsform.$valid)">
+                    <input type="hidden" name="type" ng-model="data.type" ng-init="data.type='data'"/>
+
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="data.phone" name="phone" placeholder="Recipient Phone Number" required>
+                        </label>
+                    </div>
+
+
+                    <div class="list">
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                                Operator:
+                            </div>
+                            <select ng-model="operator" ng-change="operatorValue(operator)" required>
+                                <option selected>MTN</option>
+                                <option>Airtel</option>
+                                <option>Glo</option>
+                                <option>9Mobile</option>
+                            </select>
+                        </label>
+                        <input type="hidden"  ng-model="data.operator" name="operator">
+                    </div>
+
+                    <ion-list>
+                        Select Data Bundle
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'1000'">
+                                    <small>1GB 30 days</small> <br><b>N1,000</b>
+                                </ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'2000'">
+                                    <small>3.5GB 30 days</small> <br><b>N2,000</b>
+                                </ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'3500'">
+                                    <small>5GB 30 days</small> <br><b>N3,500</b>
+                                </ion-radio>
+                            </div>
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'5000'">
+                                    <small>10GB 30 days</small> <br><b>N5,000</b>
+                                </ion-radio>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <ion-radio ng-model="data.amount" ng-value="'10000'">
+                                    <small>25GB 30 days</small> <br><b>N10,000</b>
+                                </ion-radio>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </ion-list>
+
+                    <div class="loginButton">
+                        <button class="button button-block button-calm"> Continue </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

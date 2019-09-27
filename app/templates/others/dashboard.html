@@ -1,0 +1,69 @@
+<ion-view cache-view="false" view-title="Dashboard" name="dashboard-view" hide-back-button="true">
+	<ion-nav-buttons side="right">
+		<a class="button button-icon icon ion-log-out" ng-click="doLogout()"></a>
+	</ion-nav-buttons>
+
+	<ion-pane  style="background-color: aliceblue">
+		<ion-content scroll="true">
+			<section>
+				<div class="row">
+					<div class="col text-center ui-gradient-deepblue padding">
+						<img class="avatar-account" ng-src="app/assets/images/logo.png">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center card stable-bg">
+						<a ui-sref="#" class="item light-bg">
+							<p><span class="">Wallet: N4,000</span></p>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.airtime_power" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-barcode-outline "></i></p>
+							<p><span class="">Airtime to Power</span></p>
+						</a>
+					</div>
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.airtime_wallet" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-albums-outline "></i></p>
+							<p><span class="">Airtime to Wallet</span></p>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.wallet_bank" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-home-outline "></i></p>
+							<p><span class="">Wallet to Bank</span></p>
+						</a>
+					</div>
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.airtime_data" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-briefcase-outline "></i></p>
+							<p><span class="">Buy Airtime/Data</span></p>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.verify" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-download-outline "></i></p>
+							<p><span class="">Utility Payment</span></p>
+						</a>
+					</div>
+					<div class="col text-center card calm-bg">
+						<a ui-sref="app.verify" class="item light-bg">
+							<p style="font-size:56px"><i class="icon ion-ios-analytics-outline "></i></p>
+							<p><span class="">Electricity</span></p>
+						</a>
+					</div>
+				</div>
+
+
+				</div>
+			</section>
+		</ion-content>
+	</ion-pane>
+</ion-view>

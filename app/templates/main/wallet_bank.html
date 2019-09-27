@@ -1,0 +1,46 @@
+<ion-view view-title="Wallet to Bank" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+                <form name="htsform" ng-submit="SubmitFormBank(htsform.$valid)">
+                <input type="hidden" name="type" ng-model="data.type" ng-init="data.type='bank'"/>
+
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="number" ng-model="data.amount" name="amount" placeholder="Amount" required>
+                    </label>
+                </div>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" ng-model="data.account_number" name="account_number" placeholder="Account Number" required>
+                    </label>
+                </div>
+
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Bank:
+                        </div>
+                        <select ng-model="bank" ng-change="bankValue(bank)" required>
+                            <option selected>Access Bank</option>
+                            <option>Gtbank</option>
+                            <option>Zenith Bank</option>
+                            <option>First Bank</option>
+                            <option>Eco Bank</option>
+                            <option>Polaris Bank</option>
+                            <option>Union Bank</option>
+                        </select>
+                    </label>
+                    <input type="hidden"  ng-model="data.bank" name="bank">
+                </div>
+
+                <div class="loginButton">
+                    <button class="button button-block button-calm"> Continue </button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

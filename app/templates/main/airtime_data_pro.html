@@ -1,0 +1,27 @@
+<ion-view view-title="Transaction" hide-back-button="false" cache-view="false">
+    <ion-content class="padding" style="background: aliceblue">
+
+        <div class="row responsive-sm  remvoeBP" >
+            <div class="col">
+
+                <div class="list">
+                    <p class="center" ng-show="connectingOperator">Connecting to {{posts.operator}}...</p>
+                    <p class="center balanced" ng-show="connectedOperator">Connected to: {{posts.operator}}</p>
+                    <h4 class="center" ng-show="connectedOperatorData">Recipient Phone Number: {{posts.phone}}</h4>
+                </div>
+
+                <div class="list">
+                    <p class="center" ng-show="connectingDisco">Processing transaction...</p>
+                    <p class="center balanced" ng-show="connectedDisco">Transaction successful</p>
+                    <h4 class="center assertive" ng-show="connectedDiscoData">{{posts.amount|currency:'N'}} has been deducted from Wallet.  {{posts.phone}} recharged successfully. </h4>
+                </div>
+            </div>
+
+            <div class="loginButton" ng-show="connectedDiscoData">
+                <a class="button button-block button-dark" ui-sref="app.dashboard"> Perform another transaction </a>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>
